@@ -1,0 +1,300 @@
+
+/* =================================
+   NAVBAR - CLOTHING STORE
+================================= */
+
+.navbar {
+  width: 100%;
+  min-height: 85px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Brand Logo */
+.navbar-logo {
+  font-family: var(--heading-font);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.navbar-logo span {
+  color: #b68c5a;
+}
+
+/* Navigation Menu */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.navbar-menu a {
+  font-family: var(--body-font);
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #b68c5a;
+}
+
+/* Navbar Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.search-btn {
+  padding: 11px 24px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #b68c5a;
+  border-color: #b68c5a;
+}
+
+/* Tablet Responsive */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 4%;
+  }
+
+  .navbar-menu {
+    gap: 18px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    min-height: 70px;
+    padding: 0 16px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .navbar-logo {
+    font-size: 21px;
+  }
+
+  .navbar-menu {
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 15px;
+    overflow-x: auto;
+  }
+
+  .navbar-menu a {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .search-btn {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+
+
+
+.navbar-menu button {
+  background: none;
+  border: none;
+  font-family: var(--body-font);
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu button:hover {
+  color: #b68c5a;
+}
+
+
+
+/* Search Input */
+.search-input {
+  width: 190px;
+  padding: 11px 14px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #b68c5a;
+}
+
+.search-input::placeholder {
+  color: #999999;
+}
+
+/* Mobile Search */
+@media (max-width: 600px) {
+  .search-input {
+    width: 150px;
+    padding: 9px 10px;
+  }
+}
+
+
+/* =================================
+   AVERON PREMIUM STICKY NAVBAR
+================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* NAVIGATION LINKS */
+
+.navbar-menu a,
+.navbar-menu button {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a::after,
+.navbar-menu button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #b68c5a;
+  transition: width 0.35s ease;
+}
+
+.navbar-menu a:hover::after,
+.navbar-menu button:hover::after {
+  width: 100%;
+}
+
+/* SEARCH INPUT */
+
+.search-input {
+  transition:
+    width 0.4s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  width: 220px;
+  border-color: #b68c5a;
+  box-shadow: 0 4px 15px rgba(182, 140, 90, 0.12);
+}
+
+/* BRAND HOVER */
+
+.navbar-logo {
+  transition:
+    letter-spacing 0.4s ease,
+    color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  letter-spacing: 4px;
+  color: #b68c5a;
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbar-menu a,
+  .navbar-menu button,
+  .search-input,
+  .navbar-logo {
+    transition: none;
+  }
+}
+
+
+
+/* AVERON PREMIUM BRAND LOGO */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.brand-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 3px;
+}
+
+.brand-name {
+  font-family: var(--heading-font);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  line-height: 1.1;
+  color: #1a1a1a;
+  transition: color 0.35s ease, letter-spacing 0.35s ease;
+}
+
+.brand-tagline {
+  font-family: var(--body-font);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: #b68c5a;
+}
+
+.brand-link:hover .brand-name {
+  color: #b68c5a;
+  letter-spacing: 7px;
+}
+
+@media (max-width: 600px) {
+  .brand-name {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  .brand-tagline {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+}

@@ -1,0 +1,100 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+  --primary-color: #1a1a1a;
+  --secondary-color: #f5f2ed;
+  --accent-color: #b68c5a;
+  --text-color: #333333;
+  --light-text: #777777;
+  --white: #ffffff;
+
+  --heading-font: 'Playfair Display', serif;
+  --body-font: 'DM Sans', sans-serif;
+
+  --container-width: 1200px;
+}
+
+/* HTML */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Body */
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  line-height: 1.2;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Lists */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Form Elements */
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+

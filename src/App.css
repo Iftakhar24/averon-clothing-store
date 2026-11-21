@@ -1,0 +1,247 @@
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: stretch;
+  padding: 0 0 0 8%;
+  background-color: #F1F1EF;
+}
+
+/* Hero Content */
+.hero-content {
+  flex: 1;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 25px;
+}
+
+.hero-subtitle {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #b68c5a;
+  margin-bottom: 22px;
+}
+
+.hero-content h1 {
+  font-family: var(--heading-font);
+  font-size: clamp(48px, 7vw, 82px);
+  font-weight: 600;
+  line-height: 1.1;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+}
+
+.hero-description {
+  max-width: 450px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666666;
+  margin-bottom: 35px;
+}
+
+.hero-btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 16px 35px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #b68c5a;
+  transform: translateY(-3px);
+}
+
+/* Hero Image - Desktop */
+.hero-image {
+  flex: 1;
+  min-width: 0;
+  height: 600px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 50px 6% 0;
+    gap: 35px;
+  }
+
+  .hero-content {
+    padding-right: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 380px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+/* =================================
+   AVERON ADVANCED HERO ANIMATION
+================================= */
+
+@keyframes heroTextReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+    filter: blur(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes heroImageReveal {
+  0% {
+    opacity: 0;
+    transform: scale(1.18) translateX(60px);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes heroImageFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.hero-subtitle {
+  animation: heroTextReveal 1s ease both;
+}
+
+.hero-content h1 {
+  animation: heroTextReveal 1.2s ease 0.2s both;
+}
+
+.hero-description {
+  animation: heroTextReveal 1.2s ease 0.4s both;
+}
+
+.hero-btn {
+  position: relative;
+  overflow: hidden;
+  animation: heroTextReveal 1.2s ease 0.6s both;
+  transition: transform 0.4s ease,
+              box-shadow 0.4s ease;
+}
+
+.hero-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-25deg);
+}
+
+.hero-btn:hover::before {
+  animation: buttonShine 0.8s ease;
+}
+
+@keyframes buttonShine {
+  to {
+    left: 150%;
+  }
+}
+
+.hero-btn:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 12px 30px rgba(182, 140, 90, 0.3);
+}
+
+.hero-image {
+  overflow: hidden;
+  animation: heroImageReveal 1.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.hero-image img {
+  animation: heroImageFloat 6s ease-in-out 1.6s infinite;
+  will-change: transform;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-subtitle,
+  .hero-content h1,
+  .hero-description,
+  .hero-btn,
+  .hero-image,
+  .hero-image img {
+    animation: none !important;
+    filter: none;
+    transform: none;
+  }
+
+  .hero-btn::before {
+    display: none;
+  }
+}
