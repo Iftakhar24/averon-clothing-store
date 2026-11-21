@@ -134,14 +134,14 @@ const products = [
     name: "Premium Three Piece",
     category: "Women",
     price: 89,
-    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600"
+    image: "https://label-s4u.com/cdn/shop/files/Yuvika_Chaudhary_spotted_in_Label_S4U_s_Maroon_Pakistani_Jalabiya..png?v=1789559619&width=1200"
   },
   {
     id: 20,
-    name: "Elegant Evening Gown",
+    name: "Elegant Gown",
     category: "Women",
     price: 115,
-    image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600"
+    image: "https://images.cbazaar.com/images/lavender-faux-georgette-zari-embroidered-sequins-foil-print-anarkali-suit-slsrotd6084-pl.jpg"
   },
 
   // Premimum COLLECTION - 10

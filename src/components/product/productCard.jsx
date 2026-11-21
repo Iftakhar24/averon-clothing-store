@@ -1,6 +1,4 @@
-
-import './ProductCard.css'
-
+import './productCard.css'
 function ProductCard({ image, name, category, price }) {
   return (
     <div className="product-card">
